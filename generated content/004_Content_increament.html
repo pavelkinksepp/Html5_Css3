@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+			body{
+				counter-reset: section;
+			}
+			h1{
+				counter-reset: subsection;
+			}
+			
+			h1::before{
+				counter-increment: section;
+				content: "Раздел " counter(section) ". ";
+			}
+			h2::before{
+				counter-increment: subsection;
+				content: counter(section) "." counter(subsection)" ",
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Lorem ipsum</h1>
+		<h2>Lorem ipsum</h2>
+		<h2>Lorem ipsum</h2>
+		<h2>Lorem ipsum</h2>
+
+		<h1>Lorem ipsum</h1>
+		<h2>Lorem ipsum</h2>
+		<h2>Lorem ipsum</h2>
+		
+		<h1>Lorem ipsum</h1>
+		<h2>Lorem ipsum</h2>
+		<h2>Lorem ipsum</h2>
+	</body>
+</html>

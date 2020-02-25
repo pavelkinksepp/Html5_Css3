@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			counter-reset: myIndex;
+		}
+		p{
+			counter-increment: myIndex;
+		}
+		p::before{
+			content: "Урок " counter(myIndex) ". ";
+			font-weight: bold;
+		} 
+	</style>
+</head>
+<body>
+	<p>Lorem ipsum.</p>
+	<p>Lorem ipsum.</p>
+	<p>Lorem ipsum.</p>
+	<p>Lorem ipsum.</p>
+</body>
+</html>
